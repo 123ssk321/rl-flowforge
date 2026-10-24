@@ -1,0 +1,675 @@
+{
+  "project_slug": "flowforge",
+  "first_public_result_month": 4,
+  "total_hours": 552,
+  "reserve_hours": 216,
+  "status": "queued",
+  "milestones": [
+    {
+      "id": "FF-M1",
+      "title": "Scope, rights and laptop feasibility",
+      "description": "Relative to explicit activation: Month 1; 56 task hours + 24 reserve; cumulative 80 hours. Tasks FF-001–FF-006. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Month 1",
+      "work_hours": 56,
+      "reserve_hours": 24,
+      "cumulative_hours": 80
+    },
+    {
+      "id": "FF-M2",
+      "title": "Internal end-to-end slice",
+      "description": "Relative to explicit activation: Months 2–3; 56 task hours + 24 reserve; cumulative 160 hours. Tasks FF-007–FF-012. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Months 2–3",
+      "work_hours": 56,
+      "reserve_hours": 24,
+      "cumulative_hours": 160
+    },
+    {
+      "id": "FF-M3",
+      "title": "First functional public alpha",
+      "description": "Relative to explicit activation: Month 4; 56 task hours + 24 reserve; cumulative 240 hours. Tasks FF-013–FF-018. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Month 4",
+      "work_hours": 56,
+      "reserve_hours": 24,
+      "cumulative_hours": 240
+    },
+    {
+      "id": "FF-M4",
+      "title": "Baselines, held-out evaluation and RL decision",
+      "description": "Relative to explicit activation: Months 5–7; 56 task hours + 48 reserve; cumulative 344 hours. Tasks FF-019–FF-024. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Months 5–7",
+      "work_hours": 56,
+      "reserve_hours": 48,
+      "cumulative_hours": 344
+    },
+    {
+      "id": "FF-M5",
+      "title": "Reliability and local product interfaces",
+      "description": "Relative to explicit activation: Months 9–11; 56 task hours + 48 reserve; cumulative 448 hours. Tasks FF-025–FF-030. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Months 9–11",
+      "work_hours": 56,
+      "reserve_hours": 48,
+      "cumulative_hours": 448
+    },
+    {
+      "id": "FF-M6",
+      "title": "Stable release and product decision",
+      "description": "Relative to explicit activation: Month 12; 56 task hours + 48 reserve; cumulative 552 hours. Tasks FF-031–FF-036. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Month 12",
+      "work_hours": 56,
+      "reserve_hours": 48,
+      "cumulative_hours": 552
+    }
+  ],
+  "issues": [
+    {
+      "id": "FF-001",
+      "title": "Freeze one facility and dispatch decision",
+      "body": "## Goal\nFreeze one facility and dispatch decision for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Define generated layout, orders, worker/resource model and dispatch cadence.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/SCOPE.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nOne decision action; no live WMS/ERP or multi-site scope in alpha.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nNone beyond explicit project activation.\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M1",
+      "depends_on": [],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "FF-002",
+      "title": "Specify event and unit semantics",
+      "body": "## Goal\nSpecify event and unit semantics for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Define arrivals, task readiness, resource reservation and completion order.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/EVENT_CONTRACT.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nUnits and simultaneous-event ordering explicit; no capacity double-use.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-001\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M1",
+      "depends_on": [
+        "FF-001"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "FF-003",
+      "title": "Audit generators and dependency rights",
+      "body": "## Goal\nAudit generators and dependency rights for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Choose scripted synthetic inputs and pin simulation/OR libraries.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/DATA_RIGHTS.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nAll core scenarios work without public-data access; optional imports remain gated.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-002\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M1",
+      "depends_on": [
+        "FF-002"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "FF-004",
+      "title": "Measure laptop throughput and resource caps",
+      "body": "## Goal\nMeasure laptop throughput and resource caps for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Profile small order count and deterministic scheduling.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: benchmarks/smoke.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nMeasure RAM/runtime; choose hard order/worker caps before RL trials.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-003\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M1",
+      "depends_on": [
+        "FF-003"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "FF-005",
+      "title": "Record acceptance targets and compute budget",
+      "body": "## Goal\nRecord acceptance targets and compute budget for FlowForge. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Predeclare metric hierarchy, test regime, maximum trials and scope reduction criteria.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/ACCEPTANCE.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nTargets are labeled planned; training, tuning and release evidence have separate budgets.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-004\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "FF-M1",
+      "depends_on": [
+        "FF-004"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "FF-006",
+      "title": "Prepare package and offline CI skeleton",
+      "body": "## Goal\nPrepare package and offline CI skeleton for FlowForge. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Pin supported Python/dependencies and configure typing, lint and small generated tests.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: pyproject.toml; .github/workflows/ci.yml. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nFresh environment runs checks with no dataset download, network key or GPU dependency.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-005\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "FF-M1",
+      "depends_on": [
+        "FF-005"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "FF-007",
+      "title": "Generate repeatable layout and order streams",
+      "body": "## Goal\nGenerate repeatable layout and order streams for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Generate template zones, travel times and seasonal/correlated arrivals.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/flowforge/scenarios.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nSame seed gives same event manifest; all travel times/capacities valid.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-006\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M2",
+      "depends_on": [
+        "FF-006"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "FF-008",
+      "title": "Implement event state and conservation",
+      "body": "## Goal\nImplement event state and conservation for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Track queued, assigned, processing and completed tasks.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/flowforge/environment.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nNo lost/duplicate order; every worker is in at most one task.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-007\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M2",
+      "depends_on": [
+        "FF-007"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "FF-009",
+      "title": "Implement FIFO and earliest-due-date policies",
+      "body": "## Goal\nImplement FIFO and earliest-due-date policies for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Use identical observations and feasible choices.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/flowforge/policies.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nTiny deterministic dispatch cases match expected completion ordering.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-008\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M2",
+      "depends_on": [
+        "FF-008"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "FF-010",
+      "title": "Add disruption injection",
+      "body": "## Goal\nAdd disruption injection for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Generate absenteeism, machine outage and demand surge events.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/flowforge/disruptions.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nInjection seeds separate from policy randomness; every disruption visible in report.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-009\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M2",
+      "depends_on": [
+        "FF-009"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "FF-011",
+      "title": "Test domain invariants and invalid inputs",
+      "body": "## Goal\nTest domain invariants and invalid inputs for FlowForge. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Exercise transition conservation, action shapes, units and malformed configs against the chosen domain.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: tests/test_contracts.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nTests fail for injected accounting or contract defects and cover empty/boundary cases.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-010\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "FF-M2",
+      "depends_on": [
+        "FF-010"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "FF-012",
+      "title": "Wire a small CLI vertical slice",
+      "body": "## Goal\nWire a small CLI vertical slice for FlowForge. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Connect validated config, generated scenario, baseline execution and structured output.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/flowforge/cli.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nOne command runs locally; invalid configs have a useful error and nonzero exit status.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-011\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "FF-M2",
+      "depends_on": [
+        "FF-011"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "FF-013",
+      "title": "Build bounded dispatch service",
+      "body": "## Goal\nBuild bounded dispatch service for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Expose scenario run and metric retrieval with explicit capacity constraints.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/flowforge/service.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nNo infeasible assignment accepted; overload returns a documented outcome.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-012\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M3",
+      "depends_on": [
+        "FF-012"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "FF-014",
+      "title": "Report throughput and queue tails",
+      "body": "## Goal\nReport throughput and queue tails for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Compute completion, lateness, wait and utilization from conserved events.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/flowforge/metrics.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nMetrics reconcile with event counts; incomplete orders included in denominators.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-013\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M3",
+      "depends_on": [
+        "FF-013"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "FF-015",
+      "title": "Release one-facility synthetic demo",
+      "body": "## Goal\nRelease one-facility synthetic demo for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Run generator, heuristics and report from clean checkout.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: examples/demo.yaml. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nUsable end-to-end alpha without RL advantage claim or manual data.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-014\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M3",
+      "depends_on": [
+        "FF-014"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "FF-016",
+      "title": "Add replayable run manifest",
+      "body": "## Goal\nAdd replayable run manifest for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Hash scenario, policy, generator and environment versions.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/flowforge/manifests.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nA reported bad dispatch can be reconstructed from recorded manifest.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-015\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M3",
+      "depends_on": [
+        "FF-015"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "FF-017",
+      "title": "Package reproducible install and examples",
+      "body": "## Goal\nPackage reproducible install and examples for FlowForge. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Pin dependencies, record tested platform and publish minimal synthetic example configs.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/INSTALL.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nClean installation and demo pass on CPU within measured memory/runtime envelope.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-016\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "FF-M3",
+      "depends_on": [
+        "FF-016"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "FF-018",
+      "title": "Review alpha evidence and release boundary",
+      "body": "## Goal\nReview alpha evidence and release boundary for FlowForge. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Run milestone acceptance checks, record failures and narrow scope if needed.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: reports/alpha_acceptance.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nFirst public artifact is runnable, dated relative to activation at or after month3, with limitations and reproducible commands.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-017\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "FF-M3",
+      "depends_on": [
+        "FF-017"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "FF-019",
+      "title": "Add rolling-horizon optimization baseline",
+      "body": "## Goal\nAdd rolling-horizon optimization baseline for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Use OR-Tools on a small bounded horizon with timeout.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/flowforge/optimizer.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nEnumerated tiny cases verified; time limit yields feasible fallback.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-018\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M4",
+      "depends_on": [
+        "FF-018"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "FF-020",
+      "title": "Add one compact RL dispatch policy",
+      "body": "## Goal\nAdd one compact RL dispatch policy for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Train masked discrete action policy using identical state access.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/flowforge/rl.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nCapped trial budget and CPU fallback; feasibility same for every policy.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-019\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M4",
+      "depends_on": [
+        "FF-019"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "FF-021",
+      "title": "Freeze paired scenario evaluation",
+      "body": "## Goal\nFreeze paired scenario evaluation for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Split by demand/disruption family and reserve unseen regimes.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: configs/evaluation.yaml. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nTuning and holdout seeds/configs disjoint; runtime budgets equal and explicit.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-020\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M4",
+      "depends_on": [
+        "FF-020"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "FF-022",
+      "title": "Evaluate service-cost and starvation trade-offs",
+      "body": "## Goal\nEvaluate service-cost and starvation trade-offs for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Compare heuristic/OR/RL on shared seeds, load shifts and outages.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: reports/evaluation.json. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nReport p95 lateness, throughput, violations and uncertainty including failed jobs.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-021\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M4",
+      "depends_on": [
+        "FF-021"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "FF-023",
+      "title": "Register all evaluation runs and failed trials",
+      "body": "## Goal\nRegister all evaluation runs and failed trials for FlowForge. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Store config hashes, seeds, policy version, raw metrics and failed attempts.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/flowforge/evaluation_registry.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nDuplicate run identity handled explicitly; selection/tuning history cannot silently overwrite holdout evidence.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-022\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "FF-M4",
+      "depends_on": [
+        "FF-022"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "FF-024",
+      "title": "Make the RL retention decision",
+      "body": "## Goal\nMake the RL retention decision for FlowForge. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Compare strongest baseline and RL under predeclared criteria and resource costs.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: reports/policy_decision.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nKeep, baseline-default or remove RL decision cites measurements and uncertainty; negative results preserved.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-023\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "FF-M4",
+      "depends_on": [
+        "FF-023"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "FF-025",
+      "title": "Implement cancellation and recovery",
+      "body": "## Goal\nImplement cancellation and recovery for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Bound local jobs and checkpoint event progress.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/flowforge/jobs.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nKilled job resumes without duplicate resource reservations or completions.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-024\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M5",
+      "depends_on": [
+        "FF-024"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "FF-026",
+      "title": "Version local input/output schemas",
+      "body": "## Goal\nVersion local input/output schemas for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Add validated local endpoints and export interfaces.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/flowforge/api.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nMalformed/oversize configs rejected; API has stable typed error contracts.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-025\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M5",
+      "depends_on": [
+        "FF-025"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "FF-027",
+      "title": "Add interpretable scenario comparisons",
+      "body": "## Goal\nAdd interpretable scenario comparisons for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Display differences in resource assumptions and policy outcomes.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/flowforge/compare.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nA comparison cannot mix incompatible horizons or hide failed orders.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-026\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M5",
+      "depends_on": [
+        "FF-026"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "FF-028",
+      "title": "Profile and cap long-tail workloads",
+      "body": "## Goal\nProfile and cap long-tail workloads for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Measure maximum supported layout/order count under disruptions.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: reports/performance.json. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nDocument RAM/runtime ceiling; no claims beyond tested synthetic envelope.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-027\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M5",
+      "depends_on": [
+        "FF-027"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "FF-029",
+      "title": "Test integrated failure and recovery paths",
+      "body": "## Goal\nTest integrated failure and recovery paths for FlowForge. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Inject cancellation, corrupt artifact and partial storage failure through the full workflow.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: tests/test_recovery.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nNo incomplete result is reported as success; deterministic recovery or explicit failure verified.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-028\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "FF-M5",
+      "depends_on": [
+        "FF-028"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "FF-030",
+      "title": "Review local operational and security boundary",
+      "body": "## Goal\nReview local operational and security boundary for FlowForge. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Document supported inputs, local-only defaults, log retention, resource caps and upgrade procedure.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/OPERATIONS.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nThreat model covers malformed files and untrusted checkpoints; dependencies/asset rights resolved for release.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-029\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "FF-M5",
+      "depends_on": [
+        "FF-029"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "FF-031",
+      "title": "Package scenario templates and onboarding",
+      "body": "## Goal\nPackage scenario templates and onboarding for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Provide generated examples and an operations-question walkthrough.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/USER_GUIDE.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nNew user can configure and regenerate a report without handcrafting a dataset.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-030\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M6",
+      "depends_on": [
+        "FF-030"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "FF-032",
+      "title": "Audit failure behavior and model assumptions",
+      "body": "## Goal\nAudit failure behavior and model assumptions for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Review reward choices, forecast information and synthetic realism.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/LIMITATIONS.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nKnown ranking reversals, starvation risks and unsupported workflows visible.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-031\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M6",
+      "depends_on": [
+        "FF-031"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "FF-033",
+      "title": "Gate future multi-site or traffic expansion",
+      "body": "## Goal\nGate future multi-site or traffic expansion for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Estimate adapter costs and optional SUMO seeded traffic path.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/EXTENSION_DECISION.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nNo extension enters v1 unless core quality and spare budget demonstrated.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-032\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M6",
+      "depends_on": [
+        "FF-032"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "FF-034",
+      "title": "Decide product path from workflow evidence",
+      "body": "## Goal\nDecide product path from workflow evidence for FlowForge. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Assess local tool, integration service or OSS maintenance.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/PRODUCT_DECISION.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nOperator value remains unvalidated without use; choose continue/narrow/park with explicit evidence.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-033\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "FF-M6",
+      "depends_on": [
+        "FF-033"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "FF-035",
+      "title": "Produce versioned release and recorded demonstration",
+      "body": "## Goal\nProduce versioned release and recorded demonstration for FlowForge. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Build installable package, examples, release notes and a short workflow recording.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/RELEASE.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nFresh-clone replay passes; release files include provenance and known failures; no unmeasured performance claim.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-034\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "FF-M6",
+      "depends_on": [
+        "FF-034"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "FF-036",
+      "title": "Close the milestone with evidence and remaining budget",
+      "body": "## Goal\nClose the milestone with evidence and remaining budget for FlowForge. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Audit acceptance evidence, actual hours and optional user signals; document maintenance or next activation decision.\n2. Verify against the project's domain contract and evidence boundary: Do not begin with multi-site optimization, a warehouse control system or real autonomous fleet operation. Trade-offs are illustrative until calibrated to a consenting operator.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: reports/final_review.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nReviewer can trace every claimed capability to a test/demo; all unresolved work remains explicit and no automatic next project starts.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nFF-035\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "FF-M6",
+      "depends_on": [
+        "FF-035"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    }
+  ]
+}
